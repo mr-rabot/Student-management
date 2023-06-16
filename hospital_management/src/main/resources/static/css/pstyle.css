@@ -1,0 +1,15 @@
+#ap{
+    width: 130px; 
+    height: 50px; 
+    margin-left: 300px; 
+    font-weight: bold; 
+    font-size: 17px;
+}
+#nav{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+#head1{
+    color: crimson;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/pstyle.css">
+
+    <title>Register Patient</title>
+</head>
+<body><br>
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-warning">
+        <a class="navbar-brand" href="#">  Famous Dental</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/patient">Patients</a>
+            </li>
+          </ul>
+        </div>
+      </nav><br><br>
+
+    <div class = "container">
+        <div class = "row">
+          <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 id="head1" class = "text-center"> Add New Patient </h1>
+            <div class = "card-body">
+              <form th:action="@{/patient}" th:object = "${patient}" method="POST">
+                
+                
+                <div class ="form-group">
+                  <label> Patient Full Name </label>
+                  <input
+                  type = "text"
+                  name = "pname"
+                  th:field = "*{ptname}"
+                  class = "form-control"
+                  placeholder="Enter Patient Full Name" 
+                  />
+                </div>
+              
+                <div class ="form-group">
+                  <label> Patient Age </label>
+                  <input
+                  type = "text"
+                  name = "age"
+                  th:field = "*{ptage}"
+                  class = "form-control"
+                  placeholder="Enter Patient Age" 
+                  />
+                </div>
+                <div class ="form-group">
+                    <label> Patient Treatment </label>
+                    <input
+                    type = "text"
+                    name = "treatment"
+                    th:field = "*{treatments}"
+                    class = "form-control"
+                    placeholder="Enter Treatment" 
+                    />
+                  </div>
+                  <br>
+                
+                <div class = "box-footer">
+                  <button type="submit" class = "btn btn-primary">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
